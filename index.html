@@ -12,107 +12,131 @@
   
 </head>
 <style>
-  /* footer style */
-   *{
+  body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    line-height: 1.2;
-}
-.main{
-  background-image: radial-gradient(skyblue, white);
-}
-.image{
-  background-size: cover;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: white;
 }
 
-footer{
+.footer {
+    background-color:navy;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: auto;
-    background-color: navy;
-    padding: 60px 10%;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-ul{
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.footer-section p:hover{
+    color:burlywood;
+}
+.footer-section p:hover{
+    color:burlywood;
+} 
+
+.footer-section ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-}
-.footer-col{
-    width: 25%;
-    color: #f1bc0d;;
-
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.footer-col h4{
-    position: relative;
-    margin-bottom: 30px;
-    font-weight: 400;
-    font-size: 22px;
-    color: #f1bc0d;
-    text-transform: capitalize;
+.footer-section ul li {
+    margin-bottom: 10px;
 }
 
-.footer-col h4::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    background-color: #27c0ac;
-    height: 2px;
-    width: 40px;
-}
-
-ul li:not(:last-child){
-    margin-bottom: 8px;
-}
-
-ul li a{
-    display: block;
-    font-size: 19px;
-    text-transform: capitalize;
-    color: #bdb6b6;
+.footer-section ul li a {
+    color: #fff;
     text-decoration: none;
-    transition: 0.4s;
 }
 
-ul li a:hover{
-    color: white;
-    padding-left: 2px;
+.footer-section ul li a:hover {
+    color:burlywood;
 }
 
-.links a{
-    
-   padding: 15px 10px;
-  font-size: 20px;
-  cursor: pointer;
-  outline: none;
-  color: white;  
-  border: none;
-  border-radius: 5px;
-
-    
+.footer-bottom {
+    margin-top: 80%;
+    background-color:navy;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 14px;
 }
-@media(max-width: 740px){
-    .footer-col{
-       n-bottom: 30px;
-        text-align: center;
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-flex;
+}
+
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: left;
     }
 
-    .footer-col h4::before{
-        all: unset;
+    .footer-section {
+        margin: 0 0 20px;
     }
 }
 
-@media(max-width: 555px){
-    .footer-col{
-        width: 100%;
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer-section h4 {
+        font-size: 16px;
+    }
+
+    .footer-section p, 
+    .footer-section ul {
+        font-size: 12px;
+    }
+
+    .footer-logo {
+        max-width: 100px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
     }
 }
       /* slidebar */
@@ -420,47 +444,56 @@ margin-left: 10%;
 
 
 
- <footer>
-        <div class="footer-col">
-            <img src="ph/ad.png" width="90px" height="75px" style="margin-right:200px;">
-            <ul>
-                <h3 style="margin-top: 30px; font-size: 1.6em;">Office Address:-</h3>
-                <p style="font-size: 1.2em;">SF/2,Second Floor, Urja House, Nr.The Golden Time, Swastik Char Rasta, Navrangpura, Ahmedabad-380009.</p>
-              </br>
-              <h3 style="font-size:1.6em;">Contact:</h3>
-              <p style="font-size:1.5em;">+91 98256 75267</p>
-              
-            </ul>
+ <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-section">
+                <img src="ph/ad.png" alt="Your Logo" class="footer-logo">
+        <h4>Office Address</h4>
+        <p>SF/2,Second Floor,Urja House,Nr.The Golden Time,Swastike Char Rasta,Navrangpura,Ahemdabad-380009.</p>
+        <h4>Contact:</h4>
+        <p>+91 98256 75267</p>
+      </p>
+            </div>
+            
+            
+
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">ROOM</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="footer-section">
+                <h4>Terms Feed</h4>
+                <p>TERMS & CONDITIONS</p>
+                <p>PRIVACY & POLICY</p>
+            </div>
+
+            <!-- Follow Us Section -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                     <a href="https://www.instagram.com/ad__living?utm_source=qr&igsh=MW4wNHJqcWZmOWdkYw=="><img src="ph/instagram.png"></a>
+                <a href="https://www.facebook.com/profile.php?id=61550584150380&mibextid=ZbWKwL"><img src="ph/facebook.png"></a>
+                <a href="https://www.linkedin.com/in/ad-living-2ba742224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="ph/link.png"></a>
+                 <a href="https://www.justdial.com/Ahmedabad/AD-Living-Navrangpura/079PXX79-XX79-190311100204-D7X4_BZDET"><img src="ph/jd.png"></a>
+                </div>
+        <!--copyright section-->
+        <div class="footer-bottom">
+          <p>&copy; 2024 AD Living. All rights reserved.</p>
         </div>
-        <div class="footer-col">
-            <h4 style="margin-left: 95px; font-size: 1.6em;">Quick Links</h4>
-            <ul>
-                <li style="margin-left: 95px; font-size: 1.3em;"><a href="about.html">ABOUT US</a></li>
-                <li style="margin-left: 95px; font-size: 1.3em;"><a href="services.html">SERVICES</a></li>
-                <li style="margin-left: 95px; font-size: 1.3em;"><a href="room.html">ROOMS</a></li>
-                <li style="margin-left: 95px; font-size: 1.3em;"><a href="room.html">GALLERY</a></li>
-               
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4 style="font-size: 1.6em;">Terms Feed</h4>
-            <ul>
-                <li style="font-size: 1.3em;"><a href="#">TERMS & CONDITION</a></li>
-                <li style="font-size: 1.3em;"><a href="#">PRIVACY & POLICY</a></li>
-             </ul>
-        </div>
-        <div class="footer-col">
-            <h4 style="font-size: 1.6em;">Follow Us</h4>
-            <div class="links">
-                <a href="https://www.instagram.com/ad__living?utm_source=qr&igsh=MW4wNHJqcWZmOWdkYw=="><img src="ph/instagram.png" width="35px" height="35px"></a>
-                <a href="https://www.facebook.com/profile.php?id=61550584150380&mibextid=ZbWKwL"><img src="ph/facebook.png" width="35px" height="35px"></a>
-                <a href="https://www.linkedin.com/in/ad-living-2ba742224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="ph/linkdin.png" width="47px" height="47px"></a>
-                 <a href="https://www.justdial.com/Ahmedabad/AD-Living-Navrangpura/079PXX79-XX79-190311100204-D7X4_BZDET"><img src="ph/jd.png" width="38px" height="38px"></a>
-                 
             </div>
         </div>
-    </footer>
 
+       
+    </footer>
 </body>
 </html>
 </div>
